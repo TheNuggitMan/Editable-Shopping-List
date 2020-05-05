@@ -1,9 +1,6 @@
 var button = document.getElementById("enter");
-var refresh = document.getElementById("refresh");
 var input = document.getElementById("userInput");
 var ul = document.querySelector("ul")
-var li = document.querySelector("li")
-var list = document.getElementById("list")
 
 function inputLength(){
   return input.value.length
@@ -22,14 +19,7 @@ function getEventTarget(e){
 function refreshList(){
   var remove = document.getElementById("list")
   remove.removeChild(remove.childNodes[1])
-  // remove.shift();
 }
-
-// function removeList(){
-//     for (var i=0; i < list.length(); i--){
-//         list.pop();
-//       }
-// }
 
 function addListAfterClick (){
     if (inputLength() > 0) {
@@ -51,8 +41,6 @@ function createListElement(){
 }
 
 button.addEventListener("click", addListAfterClick)
-
-// refresh.addEventListener("click", refreshList)
 
 input.addEventListener("keypress", addListAfterKeypress)
 
